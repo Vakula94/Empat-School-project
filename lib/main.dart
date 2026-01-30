@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/profile_page.dart';
+import 'core/theme/app_theme.dart';
+import 'features/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      title: 'Project 4 Flutter Track',
+      theme: AppTheme.lightTheme,
+      home: const HomePage(),
     );
   }
 }
