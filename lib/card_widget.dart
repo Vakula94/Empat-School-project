@@ -7,9 +7,31 @@ class CartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      margin: const EdgeInsets.all(16),
       padding: const EdgeInsets.all(16),
-      child: Text('Items in Bucket', style: const TextStyle(fontSize: 20)),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.05),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.blueAccent.withValues(alpha: 0.4),
+            blurRadius: 20,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.shopping_cart, color: Colors.white),
+          const SizedBox(width: 10),
+          Text(
+            'In Cart: $cartCount',
+            style: const TextStyle(color: Colors.white, fontSize: 18),
+          ),
+        ],
+      ),
     );
   }
 }

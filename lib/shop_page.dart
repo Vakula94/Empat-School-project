@@ -19,13 +19,27 @@ class _ShopPageState extends State<ShopPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Food Store')),
-      body: Column(
-        children: [
-          CartWidget(cartCount: cartCount),
-          ProductCard(onBuy: addToCart),
-        ],
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: RadialGradient(
+          center: Alignment.topLeft,
+          radius: 1.2,
+          colors: [Color(0xFF1B2735), Color(0xFF090A0F)],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Text('Інтернет-магазин 🚀'),
+        ),
+        body: Column(
+          children: [
+            CartWidget(cartCount: cartCount),
+            ProductCard(onBuy: addToCart),
+          ],
+        ),
       ),
     );
   }
