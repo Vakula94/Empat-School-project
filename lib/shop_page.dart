@@ -31,8 +31,12 @@ class _ShopPageState extends State<ShopPage> {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
+          foregroundColor: Colors.white,
           elevation: 0,
-          title: const Text('Інтернет-магазин 🚀'),
+          title: const Text(
+            'Apple Shop',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
         body: Column(
           children: [
