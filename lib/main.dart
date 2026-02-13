@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'shop_page.dart';
+import 'package:provider/provider.dart';
+import 'models/cart_model.dart';
+import 'screens/shop_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(create: (_) => CartModel(), child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ShopPage(),
+      home: ShopScreen(),
     );
   }
 }
